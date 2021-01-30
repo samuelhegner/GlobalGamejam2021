@@ -68,6 +68,7 @@ public class PlayerTractorBeam : MonoBehaviour
         {
             if (!hit.transform.CompareTag("Collected")) 
             {
+                objectToCarry.GetComponent<BeanPersonMovement>().clearPlacesToReach();
                 objectToCarry = hit.transform.GetComponent<ObjectToPickUp>();
                 objectToCarry.onPickUp();
             }

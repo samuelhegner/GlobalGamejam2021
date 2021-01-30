@@ -145,6 +145,11 @@ public class BeanPersonMovement : MonoBehaviour
         placesToReach.Enqueue(newPlace);
     }
 
+    public void clearPlacesToReach() 
+    {
+        placesToReach.Clear();
+    }
+
     private void moveBeanPerson()
     {
         Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
