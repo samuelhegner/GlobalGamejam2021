@@ -25,13 +25,9 @@ public class SpawnBeansInCollider : MonoBehaviour
             Vector3 localSpawnPoint = RandomPointInBounds(boxCollider.bounds);
             Vector3 worldSpawnPoint = transform.TransformPoint(localSpawnPoint);
             GameObject newBean = Instantiate(beanPrefab, localSpawnPoint, Quaternion.identity);
-            newBean.GetComponent<BeanPersonMovement>().addPlaceToReach(spawnExit.position, false);
+            Vector3 exitPointVector = RandomPointInBounds(spawnExit.GetComponent<BoxCollider>().bounds);
+            newBean.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPointVector, false);
         }
-    }
-
-    void Update()
-    {
-        
     }
 
     public static Vector3 RandomPointInBounds(Bounds bounds)

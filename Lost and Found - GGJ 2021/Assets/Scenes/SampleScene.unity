@@ -1352,6 +1352,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3301731964667530855, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
+      propertyPath: wallMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301731964667530855, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
       propertyPath: percentageSpeedLostWhenAttracted
       value: 50
       objectReference: {fileID: 0}
