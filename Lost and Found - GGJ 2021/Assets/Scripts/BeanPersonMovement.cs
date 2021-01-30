@@ -128,6 +128,7 @@ public class BeanPersonMovement : MonoBehaviour
     private void walkToFirstPlaceToReach()
     {
         Vector3 placePosition = placesToReach.Peek();
+        placePosition.y = transform.position.y;
         if (Vector3.Distance(transform.position, placePosition) > 0.6f)
         {
             movementDirection = getDirectionToPlace(placePosition);
