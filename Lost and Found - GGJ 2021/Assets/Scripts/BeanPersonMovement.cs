@@ -8,17 +8,30 @@ public class BeanPersonMovement : MonoBehaviour
 
     Queue<Vector3> placesToReach = new Queue<Vector3>();
 
-    [SerializeField] LayerMask groundMask;
+    [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] float maxRandomTurnAngle = 10f;
+    [SerializeField] float turningSpeed = 10f;
+    [SerializeField] float wallCheckDistance = 1f;
+    [SerializeField] float timeBetweenWallChecks = 1f;
 
-    [SerializeField] bool grounded = true;
+
+
+    [Header("Movement Layer Masks")]
+    [SerializeField] LayerMask groundMask;
+    [SerializeField] LayerMask wallMask;
+
+
+
+    bool grounded = true;
+
 
     private Vector3 movementDirection;
 
     private Vector3 randomDirection;
 
     float randomStartNoiseSample;
-
+    private float wallCheckTimer;
 
     private void Awake()
     {
@@ -26,15 +39,14 @@ public class BeanPersonMovement : MonoBehaviour
         beanPersonRigidBody = GetComponent<Rigidbody>();
 
         randomStartNoiseSample = Random.Range(-100, 100);
+
+        Vector2 randomStartDirection = Random.insideUnitCircle;
+        randomDirection = new Vector3(randomStartDirection.x, 0, randomStartDirection.y);
     }
 
 
 
-    private void moveBeanPerson()
-    {
-        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
-        beanPersonRigidBody.MovePosition(transform.position + movement);
-    }
+
 
     private void FixedUpdate()
     {
@@ -48,20 +60,66 @@ public class BeanPersonMovement : MonoBehaviour
             {
                 wanderRandomly();
             }
+
+            rotateInMovementDirection();
         }
+
+
     }
 
     private void Update()
     {
         grounded = isGrounded();
+        if (wallCheckTimer > 0) 
+        {
+            wallCheckTimer -= Time.deltaTime;
+        }
     }
+
+    private void rotateInMovementDirection()
+    {
+        transform.rotation = Quaternion.Lerp(transform.rotation
+                                           , Quaternion.LookRotation(movementDirection, Vector3.up)
+                                           , turningSpeed * Time.deltaTime);
+    }
+
+
 
     private void wanderRandomly()
     {
-        float angleToAdd = FloatExtensions.Map(Mathf.PerlinNoise(randomStartNoiseSample, 0), 0, 1, -1, 1) * 3f;
+        float angleToAdd = FloatExtensions.Map(Mathf.PerlinNoise(randomStartNoiseSample, 0), 0, 1, -1, 1) * maxRandomTurnAngle;
+
+        angleToAdd = addToAngle(angleToAdd);
+
+        randomDirection = Quaternion.AngleAxis(angleToAdd, Vector3.up) * randomDirection;
 
         movementDirection = randomDirection;
         moveBeanPerson();
+        randomStartNoiseSample += Time.deltaTime;
+    }
+
+    private float addToAngle(float angleToAddTo)
+    {
+        if (wallCheckTimer > 0)
+            return angleToAddTo;
+
+        float additionalAngle = 0;
+
+
+        Vector3 rayStartingPosition = transform.position;
+        rayStartingPosition.y += 0.5f;
+        Ray straightForwardRay = new Ray(rayStartingPosition, transform.forward);
+
+        Debug.DrawRay(straightForwardRay.origin, straightForwardRay.direction * wallCheckDistance);
+
+        if (Physics.Raycast(straightForwardRay, wallCheckDistance, wallMask))
+        {
+            print("Hit Wall");
+            additionalAngle += 180;
+            wallCheckTimer += timeBetweenWallChecks;
+        }
+        
+        return angleToAddTo + additionalAngle;
     }
 
     private void walkToFirstPlaceToReach()
@@ -88,7 +146,13 @@ public class BeanPersonMovement : MonoBehaviour
         placesToReach.Enqueue(Vector3.zero);
     }
 
-    bool isGrounded() 
+    private void moveBeanPerson()
+    {
+        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
+        beanPersonRigidBody.MovePosition(transform.position + movement);
+    }
+
+    bool isGrounded()
     {
         Vector3 rayStartPosition = transform.position;
         rayStartPosition.y += 0.1f;
