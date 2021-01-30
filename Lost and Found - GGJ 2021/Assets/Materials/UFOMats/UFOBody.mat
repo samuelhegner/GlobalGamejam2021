@@ -8,18 +8,25 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UFOBody
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: db32d79dc423d674abe389b2325e3160, type: 3}
   m_ShaderKeywords: _EMISSION _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Cubemap_00e96788f28240ae891730713658e026:
+        m_Texture: {fileID: 8900000, guid: d90904e6d2f879946875d0d2641ed581, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_9de2875e6df442a5970a2b35640a1c0a:
+        m_Texture: {fileID: 8900000, guid: 716e555017a57e04aad2c3b8bc85bc0f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -77,6 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_7c1942967b754777aa94a4e46759b7a5: 3
     - _AlphaClip: 0
     - _Blend: 3
     - _BumpScale: 1
@@ -104,6 +112,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_3b7f3383604e4675bfd7f63093650a85: {r: 1, g: 0, b: 0, a: 1}
+    - Color_87da61e6a5624633ab85c83f92eaaf6a: {r: 3.031433, g: 3.031433, b: 3.031433, a: 1}
+    - Color_c3ab2fa0df804790bd571aaf7a10b473: {r: 0, g: 7.2300916, b: 7.4642644, a: 1}
+    - Vector3_32727862e1a44037ae64480f583e1d40: {r: 1.45, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.5052607, g: 0.5052607, b: 0.5052607, a: 1}
