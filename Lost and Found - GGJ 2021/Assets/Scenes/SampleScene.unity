@@ -314,24 +314,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &224631189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3301731964667530859, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
-  m_PrefabInstance: {fileID: 3301731964858144766}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &224631190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224631189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86e391c90d194bd48978cb2859511826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
 --- !u!1 &642360504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,10 +1241,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Bean Zone
       objectReference: {fileID: 0}
-    - target: {fileID: 2639420967875608779, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
 --- !u!1001 &3301731964858144766
@@ -1437,10 +1415,6 @@ PrefabInstance:
     - target: {fileID: 5558973809134498863, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: m_Name
       value: Green Bean Zone
-      objectReference: {fileID: 0}
-    - target: {fileID: 5558973809134498863, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
