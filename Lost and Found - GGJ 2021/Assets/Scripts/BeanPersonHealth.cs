@@ -18,6 +18,7 @@ public class BeanPersonHealth : MonoBehaviour
         {
             case DeathType.laser:
                 {
+                    print("Lasered to Death");
                     break;
                 }
             case DeathType.saw:
