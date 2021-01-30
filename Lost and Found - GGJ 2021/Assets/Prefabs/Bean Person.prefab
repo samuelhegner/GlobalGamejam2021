@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5ede081e5588c449fb59e516ae1077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  startMovementSpeed: 6
   maxRandomTurnAngle: 3
   turningSpeed: 5
   wallCheckDistance: 2
   timeBetweenWallChecks: 1
+  percentageSpeedLostWhenAttracted: 50
   groundMask:
     serializedVersion: 2
     m_Bits: 512

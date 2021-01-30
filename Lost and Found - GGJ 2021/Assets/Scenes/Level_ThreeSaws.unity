@@ -2996,10 +2996,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7171349965538805434, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
-      propertyPath: beamRayLength
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 7171349965538805440, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3012,10 +3008,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 313644571}
-    - target: {fileID: 7171349965538805444, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
-      propertyPath: movementSpeed
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 7171349965538805446, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3059,10 +3051,6 @@ PrefabInstance:
     - target: {fileID: 7171349965538805446, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7171349966143220016, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f283b4aac6acca45ad99a064970e862, type: 3}
@@ -3121,6 +3109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bean Person
       objectReference: {fileID: 0}
+    - target: {fileID: 7582012835859923181, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 1669549493}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
 --- !u!4 &1270247181 stripped
@@ -4003,6 +3995,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627220304}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1669549493 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5863228269201843096, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
+  m_PrefabInstance: {fileID: 1260590806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747055305
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,6 +4888,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 286633011}
     m_Modifications:
+    - target: {fileID: 4500533519184043892, guid: 8a38578dc286d8d469badf5545a6f090, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500533519184043899, guid: 8a38578dc286d8d469badf5545a6f090, type: 3}
+      propertyPath: m_Size.y
+      value: 3.059464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500533519184043899, guid: 8a38578dc286d8d469badf5545a6f090, type: 3}
+      propertyPath: m_Center.y
+      value: 1.029732
+      objectReference: {fileID: 0}
     - target: {fileID: 4500533520488075333, guid: 8a38578dc286d8d469badf5545a6f090, type: 3}
       propertyPath: m_Name
       value: Saw Blade
