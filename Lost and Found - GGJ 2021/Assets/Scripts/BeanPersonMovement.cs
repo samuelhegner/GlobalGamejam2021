@@ -58,7 +58,7 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void wanderRandomly()
     {
-        Mathf.PerlinNoise(randomStartNoiseSample, 0);
+        float angleToAdd = FloatExtensions.Map(Mathf.PerlinNoise(randomStartNoiseSample, 0), 0, 1, -1, 1) * 3f;
 
         movementDirection = randomDirection;
         moveBeanPerson();
