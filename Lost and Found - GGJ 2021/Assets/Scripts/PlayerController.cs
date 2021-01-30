@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerTractorBeam playerTractorBeam;
 
     [Header("Player Input Settings")]
     [SerializeField] private PlayerInput playerInput;
@@ -25,11 +26,11 @@ public class PlayerController : MonoBehaviour
     {
         if (value.started)
         {
-            print("Started PickUP");
+            playerTractorBeam.setBeamState(true);
         }
         else if(value.canceled)
         {
-            print("Canceled PickUP");
+            playerTractorBeam.setBeamState(false);
         }
     }
 
