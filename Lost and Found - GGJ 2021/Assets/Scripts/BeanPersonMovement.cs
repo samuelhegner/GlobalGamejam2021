@@ -8,16 +8,24 @@ public class BeanPersonMovement : MonoBehaviour
 
     Queue<Vector3> placesToReach = new Queue<Vector3>();
 
-    private Vector3 movementDirection;
     [SerializeField] LayerMask groundMask;
     [SerializeField] private float movementSpeed = 10f;
 
     [SerializeField] bool grounded = true;
 
+    private Vector3 movementDirection;
+
+    private Vector3 randomDirection;
+
+    float randomStartNoiseSample;
+
+
     private void Awake()
     {
         setStartingPlace();
         beanPersonRigidBody = GetComponent<Rigidbody>();
+
+        randomStartNoiseSample = Random.Range(-100, 100);
     }
 
 
@@ -50,7 +58,9 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void wanderRandomly()
     {
-        movementDirection = Vector3.right;
+        Mathf.PerlinNoise(randomStartNoiseSample, 0);
+
+        movementDirection = randomDirection;
         moveBeanPerson();
     }
 
