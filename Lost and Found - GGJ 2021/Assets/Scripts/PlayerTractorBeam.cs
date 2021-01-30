@@ -68,8 +68,8 @@ public class PlayerTractorBeam : MonoBehaviour
         {
             if (!hit.transform.CompareTag("Collected")) 
             {
-                objectToCarry.GetComponent<BeanPersonMovement>().clearPlacesToReach();
                 objectToCarry = hit.transform.GetComponent<ObjectToPickUp>();
+                objectToCarry.GetComponent<BeanPersonMovement>().clearPlacesToReach();
                 objectToCarry.onPickUp();
             }
         }
@@ -82,9 +82,9 @@ public class PlayerTractorBeam : MonoBehaviour
         beamTarget.gameObject.SetActive(value);
     }
 
-    public void setBeamState(bool value) 
+    public void setBeamState() 
     {
-        tractorBeamOn = value;
+        tractorBeamOn = !tractorBeamOn;
         enableOrDisableVisuals(tractorBeamOn);
     }
 }

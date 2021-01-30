@@ -26,12 +26,9 @@ public class PlayerController : MonoBehaviour
     {
         if (value.started)
         {
-            playerTractorBeam.setBeamState(true);
+            playerTractorBeam.setBeamState();
         }
-        else if(value.canceled)
-        {
-            playerTractorBeam.setBeamState(false);
-        }
+        
     }
 
     void Update()
