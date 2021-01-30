@@ -19,15 +19,19 @@ public class BeanPersonHealth : MonoBehaviour
             case DeathType.laser:
                 {
                     print("Lasered to Death");
+                    ScoreManager.subtractFromScore();
                     break;
                 }
             case DeathType.saw:
                 {
                     print("Sawed to Death");
+                    ScoreManager.subtractFromScore();
                     break;
                 }
             case DeathType.wrongZone:
                 {
+                    print("Place the wrong zone");
+                    ScoreManager.subtractFromScore();
                     break;
                 }
             default:
