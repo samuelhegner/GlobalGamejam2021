@@ -14,12 +14,15 @@ public abstract class ObjectToPickUp : MonoBehaviour, IPickup
 
     public void onPickUp()
     {
-        objectRigidbody.isKinematic = true;
+        objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     public void onRelease()
     {
-        objectRigidbody.isKinematic = false;
+        objectRigidbody.constraints = RigidbodyConstraints.None 
+                                    | RigidbodyConstraints.FreezeRotationX 
+                                    | RigidbodyConstraints.FreezeRotationY 
+                                    | RigidbodyConstraints.FreezeRotationZ;
     }
 
     public void whilePickedUp(Transform hoverPoint)
