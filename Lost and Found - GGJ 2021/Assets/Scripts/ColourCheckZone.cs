@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColourCheckZone : MonoBehaviour
+public class ColourCheckZone : Zone
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void onZoneEntered(GameObject gameObject)
     {
-        
+        print("Show Colour");
+        BeanPersonColourSwitch colourSwitch = gameObject.GetComponent<BeanPersonColourSwitch>();
+        colourSwitch.showColour();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void onZoneLeft(GameObject beanPerson)
     {
-        
+        print("Hide Colour");
+        BeanPersonColourSwitch colourSwitch = beanPerson.GetComponent<BeanPersonColourSwitch>();
+        colourSwitch.hideColour();
     }
+
 }

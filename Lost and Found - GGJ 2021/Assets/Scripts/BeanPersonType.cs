@@ -9,7 +9,7 @@ public class BeanPersonType : MonoBehaviour
 
     public BeanType Type { get => type; set => type = value; }
 
-    void Start()
+    void Awake()
     {
         setRandomType();
     }
@@ -26,8 +26,6 @@ public class BeanPersonType : MonoBehaviour
         type = (BeanType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
         print(type);
     }
-
-    
 }
 
 public enum BeanType 
