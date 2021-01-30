@@ -40,7 +40,6 @@ public class BeanPersonMovement : MonoBehaviour
     private void Awake()
     {
         startingMovementSpeed = movementSpeed;
-        addPlaceToReach(Vector3.zero, false);
         beanPersonRigidBody = GetComponent<Rigidbody>();
 
         randomStartNoiseSample = Random.Range(-100, 100);
@@ -129,7 +128,7 @@ public class BeanPersonMovement : MonoBehaviour
     private void walkToFirstPlaceToReach()
     {
         Vector3 placePosition = placesToReach.Peek();
-        if (Vector3.Distance(transform.position, placePosition) > 0.1f)
+        if (Vector3.Distance(transform.position, placePosition) > 0.6f)
         {
             movementDirection = getDirectionToPlace(placePosition);
             moveBeanPerson();
