@@ -9,8 +9,8 @@ public class BeanPersonMovement : MonoBehaviour
     Queue<Vector3> placesToReach = new Queue<Vector3>();
 
     [Header("Movement Settings")]
-    [SerializeField] private float startMovementSpeed = 10f;
-     private float currentMovementSpeed = 10f;
+    [SerializeField] private float movementSpeed = 5f;
+    private float startingMovementSpeed;
 
     [SerializeField] float maxRandomTurnAngle = 10f;
     [SerializeField] float turningSpeed = 10f;
@@ -39,6 +39,7 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void Awake()
     {
+        startingMovementSpeed = movementSpeed;
         addPlaceToReach(Vector3.zero, false);
         beanPersonRigidBody = GetComponent<Rigidbody>();
 
@@ -136,6 +137,7 @@ public class BeanPersonMovement : MonoBehaviour
         else
         {
             placesToReach.Dequeue();
+            print("Reached Place");
         }
     }
 
@@ -150,16 +152,17 @@ public class BeanPersonMovement : MonoBehaviour
         setAttraction(attracted);
     }
 
-    private void setAttraction(bool attracted)
+    private void setAttraction(bool value)
     {
-        attracted = true;
+        attracted = value;
+        
         if (attracted)
         {
-            currentMovementSpeed = startMovementSpeed *  (percentageSpeedLostWhenAttracted / 100f);
+            movementSpeed =  startingMovementSpeed *  (1 - (percentageSpeedLostWhenAttracted / 100f));
         }
         else 
         {
-            currentMovementSpeed = startMovementSpeed;
+            movementSpeed = startingMovementSpeed;
         }
     }
 
@@ -171,7 +174,7 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void moveBeanPerson()
     {
-        Vector3 movement = movementDirection * currentMovementSpeed * Time.deltaTime;
+        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
         beanPersonRigidBody.MovePosition(transform.position + movement);
     }
 
