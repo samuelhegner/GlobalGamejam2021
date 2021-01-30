@@ -652,7 +652,7 @@ MonoBehaviour:
   model: {fileID: 589687313}
   movementSpeed: 8
   tiltSpeed: 150
-  maxTiltAngle: 70
+  maxTiltAngle: 50
 --- !u!54 &2021447359
 Rigidbody:
   m_ObjectHideFlags: 0

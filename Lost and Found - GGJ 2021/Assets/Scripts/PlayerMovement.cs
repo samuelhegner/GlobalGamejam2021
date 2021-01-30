@@ -34,12 +34,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerRigidbody.velocity.magnitude > 0.1f)
         {
-            model.transform.rotation = Quaternion.LookRotation(playerRigidbody.velocity, Vector3.up);
+            model.transform.rotation = Quaternion.LookRotation(playerRigidbody.velocity.normalized, Vector3.up);
         }
         float tiltAngle = FloatExtensions.Map(playerRigidbody.velocity.magnitude, 0, movementSpeed, 0, maxTiltAngle);
-        /*Quaternion targetRotation = Quaternion.Euler(0 + tiltAngle
-                                                      , model.transform.rotation.eulerAngles.y
-                                                      , model.transform.rotation.eulerAngles.z);*/
         Quaternion targetRotation = Quaternion.AngleAxis(tiltAngle, model.transform.right);
         model.transform.rotation = Quaternion.Slerp(model.transform.rotation, targetRotation, tiltSpeed * Time.deltaTime);
 
