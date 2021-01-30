@@ -9,11 +9,15 @@ public class BeanPersonMovement : MonoBehaviour
     Queue<Vector3> placesToReach = new Queue<Vector3>();
 
     [Header("Movement Settings")]
-    [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] private float startMovementSpeed = 10f;
+     private float currentMovementSpeed = 10f;
+
     [SerializeField] float maxRandomTurnAngle = 10f;
     [SerializeField] float turningSpeed = 10f;
     [SerializeField] float wallCheckDistance = 1f;
     [SerializeField] float timeBetweenWallChecks = 1f;
+    [SerializeField] [Range(0, 100)] float percentageSpeedLostWhenAttracted = 50;
+
 
 
 
@@ -21,7 +25,7 @@ public class BeanPersonMovement : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     [SerializeField] LayerMask wallMask;
 
-
+    bool attracted = false;
 
     bool grounded = true;
 
@@ -35,7 +39,7 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void Awake()
     {
-        addPlaceToReach(Vector3.zero);
+        addPlaceToReach(Vector3.zero, false);
         beanPersonRigidBody = GetComponent<Rigidbody>();
 
         randomStartNoiseSample = Random.Range(-100, 100);
@@ -140,19 +144,34 @@ public class BeanPersonMovement : MonoBehaviour
         return Vector3.Normalize(position - transform.position);
     }
 
-    public void addPlaceToReach(Vector3 newPlace) 
+    public void addPlaceToReach(Vector3 newPlace, bool attracted) 
     {
         placesToReach.Enqueue(newPlace);
+        setAttraction(attracted);
+    }
+
+    private void setAttraction(bool attracted)
+    {
+        attracted = true;
+        if (attracted)
+        {
+            currentMovementSpeed = startMovementSpeed *  (percentageSpeedLostWhenAttracted / 100f);
+        }
+        else 
+        {
+            currentMovementSpeed = startMovementSpeed;
+        }
     }
 
     public void clearPlacesToReach() 
     {
         placesToReach.Clear();
+        setAttraction(false);
     }
 
     private void moveBeanPerson()
     {
-        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
+        Vector3 movement = movementDirection * currentMovementSpeed * Time.deltaTime;
         beanPersonRigidBody.MovePosition(transform.position + movement);
     }
 

@@ -9,12 +9,14 @@ public abstract class ObjectToPickUp : MonoBehaviour, IPickup
     [SerializeField] private float hoverSpeed = 5f;
     [SerializeField] private float followPointSpeed = 20f;
 
+    private bool isHovering;
 
-
+    public bool IsHovering { get => isHovering; set => isHovering = value; }
 
     public void onPickUp()
     {
         objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        isHovering = true;
     }
 
     public void onRelease()
@@ -23,6 +25,7 @@ public abstract class ObjectToPickUp : MonoBehaviour, IPickup
                                     | RigidbodyConstraints.FreezeRotationX 
                                     | RigidbodyConstraints.FreezeRotationY 
                                     | RigidbodyConstraints.FreezeRotationZ;
+        isHovering = false;
     }
 
     public void whilePickedUp(Transform hoverPoint)

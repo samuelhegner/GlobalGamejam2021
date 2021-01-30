@@ -13,6 +13,7 @@ public abstract class Zone : MonoBehaviour, IZone
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Entered");
         if (beanPersonLayer == (beanPersonLayer | (1 << other.gameObject.layer)))
         {
             onZoneEntered(other.transform.parent.gameObject);
