@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Shapes;
 
 public class SawMover : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class SawMover : MonoBehaviour
 
     [SerializeField] private float sawBladeSpeed = 2f;
 
-    [SerializeField] private Polyline track;
+    [SerializeField] private LineRenderer track;
 
     void Start()
     {
@@ -29,10 +28,10 @@ public class SawMover : MonoBehaviour
 
     void setUpSawBladeTrack()
     {
+        track.positionCount = waypoints.Length;
         for (int i = 0; i < waypoints.Length; i++)
         {
-            PolylinePoint pointToAdd = new PolylinePoint(waypoints[i].position);
-            track.AddPoint(pointToAdd);
+            track.SetPosition(i, waypoints[i].position);
         }
     }
 

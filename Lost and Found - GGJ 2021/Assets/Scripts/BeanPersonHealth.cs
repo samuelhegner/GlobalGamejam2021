@@ -22,7 +22,7 @@ public class BeanPersonHealth : MonoBehaviour
                 }
             case DeathType.saw:
                 {
-
+                    print("Sawed to Death");
                     break;
                 }
             case DeathType.wrongZone:
