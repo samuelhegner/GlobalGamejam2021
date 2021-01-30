@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 152807091}
   - component: {fileID: 152807090}
   - component: {fileID: 152807089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 224631192}
   - component: {fileID: 224631191}
   - component: {fileID: 224631190}
+  - component: {fileID: 224631193}
   m_Layer: 7
   m_Name: Bean Person
   m_TagString: Untagged
@@ -283,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSpeed: 2
+  followPointSpeed: 20
 --- !u!54 &224631191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -307,13 +309,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224631189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.38, y: 0, z: 0.74}
+  m_LocalPosition: {x: 5.06, y: 0, z: -4.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1841037365}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224631193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224631189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5ede081e5588c449fb59e516ae1077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
+  movementSpeed: 1
+  grounded: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
