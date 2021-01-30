@@ -66,8 +66,12 @@ public class PlayerTractorBeam : MonoBehaviour
         beamRay = new Ray(transform.position, Vector3.down);
         if (Physics.SphereCast(beamRay, beamRadius, out hit, beamRayLength, beamMask))
         {
-            objectToCarry = hit.transform.GetComponent<ObjectToPickUp>();
-            objectToCarry.onPickUp();
+            if (hit.transform.CompareTag("Collected")) 
+            {
+                objectToCarry = hit.transform.GetComponent<ObjectToPickUp>();
+                objectToCarry.onPickUp();
+            }
+            
         }
         
     }

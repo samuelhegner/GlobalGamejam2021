@@ -35,7 +35,7 @@ public class BeanPersonMovement : MonoBehaviour
 
     private void Awake()
     {
-        setStartingPlace();
+        addPlaceToReach(Vector3.zero);
         beanPersonRigidBody = GetComponent<Rigidbody>();
 
         randomStartNoiseSample = Random.Range(-100, 100);
@@ -140,9 +140,9 @@ public class BeanPersonMovement : MonoBehaviour
         return Vector3.Normalize(position - transform.position);
     }
 
-    private void setStartingPlace()
+    public void addPlaceToReach(Vector3 newPlace) 
     {
-        placesToReach.Enqueue(Vector3.zero);
+        placesToReach.Enqueue(newPlace);
     }
 
     private void moveBeanPerson()

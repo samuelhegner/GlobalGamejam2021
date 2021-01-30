@@ -9,10 +9,14 @@ namespace Assets.Scripts
         [SerializeField] private BeanType zoneType;
         [SerializeField] private DeathType deathType;
 
+        [SerializeField] private Transform exitPoint;
+
         public override void onZoneEntered(GameObject gameObject)
         {
             if (zoneType == gameObject.GetComponent<BeanPersonType>().Type)
             {
+                gameObject.tag = "Collected";
+                gameObject.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPoint.position);
                 ScoreManager.addToScore();
             }
             else 

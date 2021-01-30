@@ -1259,6 +1259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Bean Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 2639420967875608779, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
 --- !u!1001 &3301731964858144766
@@ -1331,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5500510478107295729, guid: 333d754436bc3af4cbb0ce4c3ad65585, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5500510478107295743, guid: 333d754436bc3af4cbb0ce4c3ad65585, type: 3}
       propertyPath: m_RootOrder
@@ -1493,7 +1497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824204969739692943, guid: 9aa991835bd91af4981ee641ca4a3364, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa991835bd91af4981ee641ca4a3364, type: 3}
