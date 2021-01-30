@@ -45,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void movePlayer()
     {
-        Vector3 movement = CameraDirection(movementDirection) * movementSpeed * Time.deltaTime;
+        Vector3 inputDirection = CameraDirection(movementDirection);
+        Vector3 movement = inputDirection * movementSpeed * Time.deltaTime;
         playerRigidbody.MovePosition(transform.position + movement);
     }
 
@@ -61,8 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
         cameraForward.y = 0f;
         cameraRight.y = 0f;
-
-        return cameraForward * movementDirection.z + cameraRight * movementDirection.x;
-
+        
+        Vector3 direction = cameraForward.normalized * movementDirection.z + cameraRight.normalized * movementDirection.x;
+        return Vector3.ProjectOnPlane(direction, Vector3.up);
     }
 }

@@ -114,7 +114,6 @@ public class BeanPersonMovement : MonoBehaviour
 
         if (Physics.Raycast(straightForwardRay, wallCheckDistance, wallMask))
         {
-            print("Hit Wall");
             additionalAngle += 180;
             wallCheckTimer += timeBetweenWallChecks;
         }
