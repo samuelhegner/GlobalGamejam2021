@@ -22,8 +22,8 @@ public class BeanPersonType : MonoBehaviour
     private void setRandomType()
     {
         Array values = Enum.GetValues(typeof(BeanType));
-        System.Random random = new System.Random();
-        type = (BeanType)values.GetValue(random.Next(values.Length));
+        
+        type = (BeanType)values.GetValue(UnityEngine.Random.Range(0, values.Length));
         print(type);
     }
 
