@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level Comeplete!
+  m_text: Level Complete!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 355e9d25d823d4c48b0c98c2a34457c6, type: 2}
   m_sharedMaterial: {fileID: 7146983123771740885, guid: 355e9d25d823d4c48b0c98c2a34457c6, type: 2}
