@@ -7,7 +7,7 @@ public class PlayerTractorBeam : MonoBehaviour
 {
     public bool tractorBeamOn;
 
-    ObjectToPickUp objectToCarry;
+    public ObjectToPickUp objectToCarry;
 
     [SerializeField] private Transform hoverTransform;
     [SerializeField] private Transform beamLight;
@@ -49,7 +49,7 @@ public class PlayerTractorBeam : MonoBehaviour
         }
     }
 
-    private void releaseObject()
+    public void releaseObject()
     {
         objectToCarry.onRelease();
         objectToCarry = null;

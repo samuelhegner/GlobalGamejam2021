@@ -7,6 +7,14 @@ public class BeanPersonHealth : MonoBehaviour
     [SerializeField] private GameObject [] deathParticleSystemPrefabs;
 
     [SerializeField] private float timeBeforeDeletion = 1f;
+
+    PlayerTractorBeam tractorBeam;
+
+    private void Start()
+    {
+        tractorBeam = FindObjectOfType<PlayerTractorBeam>();
+    }
+
     public void kill(DeathType type)
     {
         onDeath(type);
@@ -14,7 +22,10 @@ public class BeanPersonHealth : MonoBehaviour
     }
     void onDeath(DeathType type)
     {
-        
+        if (tractorBeam.objectToCarry.gameObject == gameObject) 
+        {
+            tractorBeam.releaseObject();
+        }
 
         switch (type)
         {
