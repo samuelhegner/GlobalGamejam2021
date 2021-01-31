@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 224631190}
   - component: {fileID: 2292705270140131676}
   - component: {fileID: 7582012835859923181}
+  - component: {fileID: 1805459422}
   m_Layer: 7
   m_Name: Bean Person
   m_TagString: Untagged
@@ -136,6 +137,25 @@ MonoBehaviour:
   rend: {fileID: 4056541183035428913}
   colourIntensity: 1.25
   colLerp: {fileID: 6809222169465053471}
+--- !u!95 &1805459422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301731964667530859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f88de544e2094a45863c712d8e55bb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3301731966273984458
 GameObject:
   m_ObjectHideFlags: 0
