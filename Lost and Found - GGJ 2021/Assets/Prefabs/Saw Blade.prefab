@@ -248,8 +248,8 @@ GameObject:
   - component: {fileID: 5500510479404773568}
   - component: {fileID: 5500510479404773581}
   - component: {fileID: 5500510479404773582}
-  - component: {fileID: 5500510479404773583}
   - component: {fileID: 1511922108}
+  - component: {fileID: 1677040204527540560}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -321,19 +321,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5500510479404773583
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5500510479404773569}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1511922108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -430,6 +417,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &1677040204527540560
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500510479404773569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6527082
+  m_Height: 24.413898
+  m_Direction: 1
+  m_Center: {x: 0, y: -8.549996, z: -0.085522376}
 --- !u!1001 &6825583738438770724
 PrefabInstance:
   m_ObjectHideFlags: 0

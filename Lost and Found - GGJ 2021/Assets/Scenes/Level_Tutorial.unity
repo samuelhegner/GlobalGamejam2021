@@ -762,7 +762,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 237209578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1906182760}
+        m_TargetAssemblyTypeName: ReloadScene, Assembly-CSharp
+        m_MethodName: reloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &237209578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,6 +873,7 @@ GameObject:
   - component: {fileID: 354225036}
   - component: {fileID: 354225035}
   - component: {fileID: 354225034}
+  - component: {fileID: 354225037}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -910,9 +923,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.27987415, g: 0.79280764, b: 1, a: 0.87058824}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.87058824}
+    m_HighlightedColor: {r: 0.011764706, g: 0.62352943, b: 0.8, a: 0.87058824}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -931,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 354225035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1906182760}
+        m_TargetAssemblyTypeName: ReloadScene, Assembly-CSharp
+        m_MethodName: reloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &354225035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,6 +995,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354225032}
   m_CullTransparentMesh: 1
+--- !u!114 &354225037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354225032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bbdf661363e214987569d34ce44244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &368257980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,7 +1170,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 388491877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1906182761}
+        m_TargetAssemblyTypeName: MoveToScene, Assembly-CSharp
+        m_MethodName: moveToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &388491877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2433,6 +2482,7 @@ GameObject:
   - component: {fileID: 1118795374}
   - component: {fileID: 1118795373}
   - component: {fileID: 1118795372}
+  - component: {fileID: 1118795375}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2482,7 +2532,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.2784314, g: 0.7921569, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.87058824}
+    m_HighlightedColor: {r: 0.012608201, g: 0.6218581, b: 0.8018868, a: 0.87058824}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2503,7 +2553,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1118795373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1906182761}
+        m_TargetAssemblyTypeName: MoveToScene, Assembly-CSharp
+        m_MethodName: moveToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu Scene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1118795373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,6 +2604,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118795370}
   m_CullTransparentMesh: 1
+--- !u!114 &1118795375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118795370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0593fd73f55abd4ebf0c74a217ef588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToMoveTo: Menu Scene
 --- !u!1 &1184871835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,6 +4058,8 @@ GameObject:
   - component: {fileID: 1906182756}
   - component: {fileID: 1906182758}
   - component: {fileID: 1906182759}
+  - component: {fileID: 1906182760}
+  - component: {fileID: 1906182761}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -4031,9 +4108,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfBeansLeft: 0
-  gameComplete:
+  scoreNeededToWin: 20
+  gameCompleteSuccess:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 86969423}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  gameCompleteFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044539437}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1906182759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4047,6 +4152,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 486771337}
+--- !u!114 &1906182760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906182755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bbdf661363e214987569d34ce44244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1906182761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906182755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0593fd73f55abd4ebf0c74a217ef588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToMoveTo: Menu Scene
 --- !u!1 &1962083572
 GameObject:
   m_ObjectHideFlags: 0
