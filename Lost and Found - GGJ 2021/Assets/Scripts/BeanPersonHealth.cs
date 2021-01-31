@@ -54,7 +54,6 @@ public class BeanPersonHealth : MonoBehaviour
                     print("Place the wrong zone");
                     EndGameManager.subtractFromNumberOfBeans();
                     GetComponent<BeanPersonAnimation>().DeathAnimation();
-                    ScoreManager.subtractFromScore();
                     GetComponent<BeanPersonSounds>().playDeath();
                     break;
                 }
