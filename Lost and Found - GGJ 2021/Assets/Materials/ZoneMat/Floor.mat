@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenZoneMat
-  m_Shader: {fileID: -6465566751694194690, guid: 2370a60ee47ec0f4eae104dc0e2eb31b, type: 3}
+  m_Name: Floor
+  m_Shader: {fileID: -6465566751694194690, guid: 70893c4dc58bae44ca3b4795aea7eabc, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -88,14 +88,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_03aa8e25be7949669c0f510c3519be51: 2.56
-    - Vector1_0cd608f4aea9479da0b3ea673be9515e: 1.5
-    - Vector1_0d9eedf96cc84f88b12bb60043fe67f5: 0.59
+    - Vector1_03aa8e25be7949669c0f510c3519be51: 3.23
+    - Vector1_0cd608f4aea9479da0b3ea673be9515e: -0.4
+    - Vector1_0d9eedf96cc84f88b12bb60043fe67f5: 0.22
+    - Vector1_2a93a7cb1ef846259ca65c492f70029f: 0.01
     - Vector1_2ac8dd30355e4eedae848467e76e527f: 1
-    - Vector1_2ebf862a4c204cd29b0b976ef7f8e690: 2
-    - Vector1_4ef61b5e0b85475ca0e8cb82860b66c3: 0.1
-    - Vector1_6674b8c2951e40dd8d79af72883206b8: 2
-    - Vector1_75ef98d316e944a4a30b93dba3818d7a: 1.73
+    - Vector1_2ebf862a4c204cd29b0b976ef7f8e690: 1.14
+    - Vector1_4ef61b5e0b85475ca0e8cb82860b66c3: 0.05
+    - Vector1_6674b8c2951e40dd8d79af72883206b8: 1.6
+    - Vector1_75ef98d316e944a4a30b93dba3818d7a: 4.14
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -123,8 +124,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_162044d08fec4b72ae0d764d441f632d: {r: 0, g: 1, b: 0.065570354, a: 1}
-    - Color_1db66912292b48d085ec6b44d8dbf7d5: {r: 0.09104663, g: 0.6226415, b: 0.12742959, a: 1}
+    - Color_162044d08fec4b72ae0d764d441f632d: {r: 1, g: 1, b: 1, a: 1}
+    - Color_1db66912292b48d085ec6b44d8dbf7d5: {r: 1, g: 1, b: 1, a: 1}
     - Vector2_e60a5ab3eab241f0a161f388f4383244: {r: 1, g: 15, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
