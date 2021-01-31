@@ -3,5 +3,6 @@ public enum DeathType
 {
     laser,
     saw,
-    wrongZone
+    wrongZone,
+    killedOff
 }

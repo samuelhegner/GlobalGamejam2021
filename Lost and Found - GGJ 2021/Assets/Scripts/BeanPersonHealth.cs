@@ -14,7 +14,7 @@ public class BeanPersonHealth : MonoBehaviour
     }
     void onDeath(DeathType type)
     {
-        GetComponent<BeanPersonAnimation>().DeathAnimation();
+        
 
         switch (type)
         {
@@ -22,19 +22,28 @@ public class BeanPersonHealth : MonoBehaviour
                 {
                     print("Lasered to Death");
                     EndGameManager.subtractFromNumberOfBeans();
+                    GetComponent<BeanPersonAnimation>().DeathAnimation();
                     break;
                 }
             case DeathType.saw:
                 {
                     print("Sawed to Death");
                     EndGameManager.subtractFromNumberOfBeans();
+                    GetComponent<BeanPersonAnimation>().DeathAnimation();
                     break;
                 }
             case DeathType.wrongZone:
                 {
                     print("Place the wrong zone");
                     EndGameManager.subtractFromNumberOfBeans();
+                    GetComponent<BeanPersonAnimation>().DeathAnimation();
                     ScoreManager.subtractFromScore();
+                    break;
+                }
+            case DeathType.killedOff: 
+                {
+                    print("Killed off after collection");
+                    EndGameManager.subtractFromNumberOfBeans();
                     break;
                 }
             default:

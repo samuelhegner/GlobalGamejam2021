@@ -18,6 +18,8 @@ public class CollectionZone : Zone
             EndGameManager.subtractFromNumberOfBeans();
             gameObject.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPoint.position, false);
             ScoreManager.addToScore();
+            BeanPersonHealth health;
+            gameObject.GetComponent<BeanPersonHealth>().kill(DeathType.killedOff);
         }
         else
         {
