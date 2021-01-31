@@ -17,7 +17,6 @@ public class CollectionZone : Zone
             gameObject.tag = "Collected";
             gameObject.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPoint.position, false);
             ScoreManager.addToScore();
-            BeanPersonHealth health;
             gameObject.GetComponent<BeanPersonHealth>().kill(DeathType.killedOff);
             gameObject.GetComponent<BeanPersonSounds>().playCollected();
         }
