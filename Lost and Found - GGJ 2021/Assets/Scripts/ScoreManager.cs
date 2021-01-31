@@ -7,8 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private int scorePerBean;
 
-    public Action<int> onScoreChanged;
-    private static ScoreManager instance;
+    public event Action<int> onScoreChanged;
+    public static ScoreManager instance;
     [SerializeField] int score;
 
     private void Awake()
