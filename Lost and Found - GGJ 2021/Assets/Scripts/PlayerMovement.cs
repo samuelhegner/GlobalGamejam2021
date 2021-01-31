@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float tiltSpeed = 10f;
     [SerializeField] private float maxTiltAngle = 25f;
 
-
+    public Vector3 movement;
 
 
     Vector3 movementDirection;
@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
     private void movePlayer()
     {
         Vector3 inputDirection = CameraDirection(movementDirection);
-        Vector3 movement = inputDirection * movementSpeed * Time.deltaTime;
+        movement = inputDirection * movementSpeed * Time.deltaTime;
+        
         playerRigidbody.MovePosition(transform.position + movement);
     }
 

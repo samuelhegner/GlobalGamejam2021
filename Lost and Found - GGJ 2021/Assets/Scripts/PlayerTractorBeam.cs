@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerTractorBeam : MonoBehaviour
 {
-    bool tractorBeamOn;
+    public bool tractorBeamOn;
 
     ObjectToPickUp objectToCarry;
 
