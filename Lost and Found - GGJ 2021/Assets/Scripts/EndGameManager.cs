@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class EndGameManager : MonoBehaviour
 
     [SerializeField] int numberOfBeansLeft;
 
-    static Action gameComplete;
+    public UnityEvent gameComplete;
 
 
     private void Awake()

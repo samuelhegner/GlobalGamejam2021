@@ -971,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7020f2af20a0c784dbe6f19407b09f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfBeansLeft: 0
 --- !u!1 &1508614469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1162,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 32.677, z: 0}
+--- !u!1 &1805459421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3301731964667530859, guid: 9f0100adc07e16a4e84a6bc3548942eb, type: 3}
+  m_PrefabInstance: {fileID: 313246567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1805459422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805459421}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f88de544e2094a45863c712d8e55bb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1817458652
 GameObject:
   m_ObjectHideFlags: 0
