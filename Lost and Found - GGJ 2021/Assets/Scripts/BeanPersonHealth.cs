@@ -14,6 +14,8 @@ public class BeanPersonHealth : MonoBehaviour
     }
     void onDeath(DeathType type)
     {
+        GetComponent<BeanPersonAnimation>().DeathAnimation();
+
         switch (type)
         {
             case DeathType.laser:

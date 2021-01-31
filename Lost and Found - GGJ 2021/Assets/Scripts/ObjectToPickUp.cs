@@ -17,6 +17,7 @@ public abstract class ObjectToPickUp : MonoBehaviour, IPickup
     {
         objectRigidbody.constraints = RigidbodyConstraints.FreezeAll;
         isHovering = true;
+        GetComponent<BeanPersonAnimation>().HoverAnimation(isHovering);
     }
 
     public void onRelease()
@@ -26,6 +27,7 @@ public abstract class ObjectToPickUp : MonoBehaviour, IPickup
                                     | RigidbodyConstraints.FreezeRotationY 
                                     | RigidbodyConstraints.FreezeRotationZ;
         isHovering = false;
+        GetComponent<BeanPersonAnimation>().HoverAnimation(isHovering);
     }
 
     public void whilePickedUp(Transform hoverPoint)
