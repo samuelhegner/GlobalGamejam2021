@@ -27,6 +27,7 @@ public class SpawnBeansInCollider : MonoBehaviour
             GameObject newBean = Instantiate(beanPrefab, localSpawnPoint, Quaternion.identity);
             Vector3 exitPointVector = RandomPointInBounds(spawnExit.GetComponent<BoxCollider>().bounds);
             newBean.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPointVector, false);
+            EndGameManager.addToNumberOfBeans();
         }
     }
 

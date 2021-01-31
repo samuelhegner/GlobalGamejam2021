@@ -8,11 +8,13 @@ public abstract class ObstacleKill : MonoBehaviour, IKiller
     
     public void killObject(BeanPersonHealth beanPerson)
     {
+        beanPerson.tag = "Collected";
         beanPerson.kill(typeOfDeath);
     }
 
     public virtual void trapTriggered(BeanPersonHealth beanPersonWhoTriggered)
     {
-        killObject(beanPersonWhoTriggered);
+        if(!beanPersonWhoTriggered.CompareTag("Collected"))
+            killObject(beanPersonWhoTriggered);
     }
 }

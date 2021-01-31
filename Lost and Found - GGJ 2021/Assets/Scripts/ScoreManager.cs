@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     private static ScoreManager instance;
     [SerializeField] int score;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
     }
