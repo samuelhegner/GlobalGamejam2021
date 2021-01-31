@@ -8,6 +8,8 @@ public class BeanPersonAnimation : MonoBehaviour
     Animator anim;
 
     public ParticleSystem heartSystem;
+    public ParticleSystem deathSystem;
+
 
     private void Start()
     {
@@ -17,6 +19,7 @@ public class BeanPersonAnimation : MonoBehaviour
     public void DeathAnimation() 
     {
         anim.SetTrigger("Death");
+        deathSystem.Play();
     }
 
     public void HoverAnimation(bool value) 
