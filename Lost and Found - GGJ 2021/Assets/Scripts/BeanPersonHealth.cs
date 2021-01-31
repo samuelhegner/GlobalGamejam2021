@@ -22,7 +22,7 @@ public class BeanPersonHealth : MonoBehaviour
     }
     void onDeath(DeathType type)
     {
-        if (tractorBeam.objectToCarry.gameObject == gameObject) 
+        if (tractorBeam.objectToCarry.gameObject != null && tractorBeam.objectToCarry.gameObject == gameObject) 
         {
             tractorBeam.releaseObject();
         }
