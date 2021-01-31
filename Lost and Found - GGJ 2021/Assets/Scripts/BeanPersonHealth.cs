@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class BeanPersonHealth : MonoBehaviour
 {
@@ -22,7 +23,9 @@ public class BeanPersonHealth : MonoBehaviour
     }
     void onDeath(DeathType type)
     {
-        if (tractorBeam.objectToCarry.gameObject != null && tractorBeam.objectToCarry.gameObject == gameObject) 
+        Assert.IsNotNull(tractorBeam);
+
+        if (tractorBeam.objectToCarry != null && tractorBeam.objectToCarry.gameObject == gameObject) 
         {
             tractorBeam.releaseObject();
         }
