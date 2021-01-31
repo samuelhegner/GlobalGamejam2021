@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class BeanPersonColourSwitch : MonoBehaviour
 {
-    [SerializeField] private Material hidden, green, red;
+    [SerializeField] private Color hidden, green, red;
     [SerializeField] private Renderer rend;
+    [SerializeField] private float colourIntensity = 1.25f;
+    [SerializeField] private ColourLerp colLerp;
 
     private BeanPersonType beanPersonType;
 
 
-    Material reveal;
+    Color reveal;
 
 
     private void Start()
@@ -30,15 +32,17 @@ public class BeanPersonColourSwitch : MonoBehaviour
         {
             reveal = red;
         }
-        rend.material = hidden;
+        rend.material.SetColor("_EmissionColor", hidden * colourIntensity);
     }
 
     public void showColour() 
     {
-        rend.material = reveal;
+        rend.material.SetColor("_EmissionColor", reveal * colourIntensity);
+        colLerp.SetColour(hidden, colourIntensity);
     }
     public void hideColour() 
     {
-        rend.material = hidden;
+        rend.material.SetColor("_EmissionColor", hidden * colourIntensity);
+        colLerp.SetColour(reveal, colourIntensity);
     }
 }
