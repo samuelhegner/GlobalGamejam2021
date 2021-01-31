@@ -12,6 +12,7 @@ public class PlayerTractorBeam : MonoBehaviour
     [SerializeField] private Transform hoverTransform;
     [SerializeField] private Transform beamLight;
     [SerializeField] private Transform beamTarget;
+    [SerializeField] private Transform beamLaser;
 
 
     [SerializeField] private float beamRadius;
@@ -21,6 +22,10 @@ public class PlayerTractorBeam : MonoBehaviour
 
 
     Ray beamRay;
+
+    [SerializeField] private Vector3 beamVector = new Vector3(0, 0, 9);
+
+    [SerializeField] private LineRenderer lr;
 
     void Start()
     {
@@ -53,11 +58,17 @@ public class PlayerTractorBeam : MonoBehaviour
     {
         objectToCarry.onRelease();
         objectToCarry = null;
+        lr.useWorldSpace = false;
+        lr.SetPosition(0, Vector3.zero);
+        lr.SetPosition(1, beamVector);
     }
 
     private void carryObject()
     {
         objectToCarry.whilePickedUp(hoverTransform);
+        lr.useWorldSpace = true;
+        lr.SetPosition(0, beamLaser.transform.position);
+        lr.SetPosition(1, objectToCarry.transform.position);
     }
 
     private void pickUpObject()
@@ -76,10 +87,11 @@ public class PlayerTractorBeam : MonoBehaviour
         
     }
 
-    void enableOrDisableVisuals (bool value) 
+    void enableOrDisableVisuals(bool value)
     {
         beamLight.gameObject.SetActive(value);
         beamTarget.gameObject.SetActive(value);
+        beamLaser.gameObject.SetActive(value);
     }
 
     public void setBeamState() 
@@ -88,3 +100,5 @@ public class PlayerTractorBeam : MonoBehaviour
         enableOrDisableVisuals(tractorBeamOn);
     }
 }
+
+
