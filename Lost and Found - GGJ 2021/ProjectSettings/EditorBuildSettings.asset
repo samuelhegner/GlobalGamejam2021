@@ -4,6 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu Scene.unity
+    guid: 69d313d7ee6c3c44c9aa4d982ec2d85c
+  - enabled: 1
+    path: Assets/Scenes/Level_Tutorial.unity
+    guid: 8f58e333c73488c428da430883526995
+  - enabled: 1
+    path: Assets/Scenes/Level_ThreeSaws.unity
+    guid: 7ca2f98a048d842458685b6e6ebff022
+  - enabled: 1
+    path: Assets/Scenes/Level_MovingSaws.unity
+    guid: 414ce45a205dabf47b89da3a41ead4ac
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8c4dbed466d36794393e481b24d59537, type: 2}
