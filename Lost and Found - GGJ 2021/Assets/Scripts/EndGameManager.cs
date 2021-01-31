@@ -10,7 +10,10 @@ public class EndGameManager : MonoBehaviour
 
     [SerializeField] int numberOfBeansLeft;
 
-    public UnityEvent gameComplete;
+    [SerializeField] int scoreNeededToWin;
+
+    public UnityEvent gameCompleteSuccess;
+    public UnityEvent gameCompleteFail;
 
 
     private void Awake()
@@ -32,7 +35,15 @@ public class EndGameManager : MonoBehaviour
     {
         if (Time.frameCount > 120 && numberOfBeansLeft <= 0) 
         {
-            gameComplete?.Invoke();
+            if (scoreNeededToWin >= ScoreManager.instance.score)
+            {
+                gameCompleteSuccess?.Invoke();
+            }
+            else 
+            {
+                gameCompleteFail?.Invoke();
+            }
+            
         }
     }
 }

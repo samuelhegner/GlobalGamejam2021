@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     public event Action<int> onScoreChanged;
     public static ScoreManager instance;
-    [SerializeField] int score;
+    [SerializeField] public int score;
 
     private void Awake()
     {
