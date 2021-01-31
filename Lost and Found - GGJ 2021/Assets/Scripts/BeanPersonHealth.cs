@@ -23,6 +23,8 @@ public class BeanPersonHealth : MonoBehaviour
                     print("Lasered to Death");
                     EndGameManager.subtractFromNumberOfBeans();
                     GetComponent<BeanPersonAnimation>().DeathAnimation();
+                    GetComponent<BeanPersonSounds>().playDeath();
+
                     break;
                 }
             case DeathType.saw:
@@ -30,6 +32,7 @@ public class BeanPersonHealth : MonoBehaviour
                     print("Sawed to Death");
                     EndGameManager.subtractFromNumberOfBeans();
                     GetComponent<BeanPersonAnimation>().DeathAnimation();
+                    GetComponent<BeanPersonSounds>().playDeath();
                     break;
                 }
             case DeathType.wrongZone:
@@ -38,6 +41,7 @@ public class BeanPersonHealth : MonoBehaviour
                     EndGameManager.subtractFromNumberOfBeans();
                     GetComponent<BeanPersonAnimation>().DeathAnimation();
                     ScoreManager.subtractFromScore();
+                    GetComponent<BeanPersonSounds>().playDeath();
                     break;
                 }
             case DeathType.killedOff: 

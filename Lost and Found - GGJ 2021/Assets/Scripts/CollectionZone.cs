@@ -20,6 +20,7 @@ public class CollectionZone : Zone
             ScoreManager.addToScore();
             BeanPersonHealth health;
             gameObject.GetComponent<BeanPersonHealth>().kill(DeathType.killedOff);
+            gameObject.GetComponent<BeanPersonSounds>().playCollected();
         }
         else
         {

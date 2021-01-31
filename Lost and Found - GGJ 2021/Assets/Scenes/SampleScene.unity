@@ -1372,6 +1372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Bean Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 2639420967875608779, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 604c30537af526d4c8265c18da548a3d, type: 3}
 --- !u!1001 &5500510479080920871
