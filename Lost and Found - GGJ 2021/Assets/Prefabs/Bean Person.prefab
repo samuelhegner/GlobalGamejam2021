@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5ede081e5588c449fb59e516ae1077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 2.5
   maxRandomTurnAngle: 3
   turningSpeed: 5
   wallCheckDistance: 2
