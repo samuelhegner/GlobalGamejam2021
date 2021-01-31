@@ -7,6 +7,8 @@ public class BeanPersonAnimation : MonoBehaviour
 
     Animator anim;
 
+    public ParticleSystem heartSystem;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -20,6 +22,18 @@ public class BeanPersonAnimation : MonoBehaviour
     public void HoverAnimation(bool value) 
     {
         anim.SetBool("Hover", value);
+    }
+
+    public void SetHeartAttraction(bool value) 
+    {
+        if (value)
+        {
+            heartSystem.Play();
+        }
+        else 
+        {
+            heartSystem.Stop();
+        }
     }
 }
 

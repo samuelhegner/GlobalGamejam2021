@@ -155,6 +155,8 @@ public class BeanPersonMovement : MonoBehaviour
     private void setAttraction(bool value)
     {
         attracted = value;
+
+        GetComponent<BeanPersonAnimation>().SetHeartAttraction(value);
         
         if (attracted)
         {
