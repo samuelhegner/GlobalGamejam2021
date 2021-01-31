@@ -35,7 +35,7 @@ public class EndGameManager : MonoBehaviour
     {
         if (Time.frameCount > 120 && numberOfBeansLeft <= 0) 
         {
-            if (scoreNeededToWin >= ScoreManager.instance.score)
+            if (scoreNeededToWin <= ScoreManager.instance.score)
             {
                 gameCompleteSuccess?.Invoke();
             }
