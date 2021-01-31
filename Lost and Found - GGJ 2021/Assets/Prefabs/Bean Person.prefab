@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hidden: {r: 1, g: 1, b: 1, a: 1}
   green: {r: 0.06958233, g: 0.754717, b: 0, a: 1}
-  red: {r: 0.8113208, g: 0.19517621, b: 0.19517621, a: 1}
+  red: {r: 0.05345905, g: 0.5160881, b: 1, a: 1}
   rend: {fileID: 4056541183035428913}
   colourIntensity: 1.25
   colLerp: {fileID: 6809222169465053471}

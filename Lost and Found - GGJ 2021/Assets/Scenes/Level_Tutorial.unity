@@ -985,6 +985,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Colour Change Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 5868594248024251210, guid: f7f205f39e86df24d999ac01d67d3b91, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5741876
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868594248024251210, guid: f7f205f39e86df24d999ac01d67d3b91, type: 3}
+      propertyPath: m_Center.y
+      value: -0.21290621
+      objectReference: {fileID: 0}
     - target: {fileID: 5868594248024251211, guid: f7f205f39e86df24d999ac01d67d3b91, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1971,6 +1979,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 121639629, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cb6865751c3eff543aaa4481e914753f, type: 2}
     - target: {fileID: 5558973809134498850, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: zoneType
       value: 0
@@ -2001,7 +2013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558973809134498851, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.6
+      value: 15.14
       objectReference: {fileID: 0}
     - target: {fileID: 5558973809134498851, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2075,7 +2087,7 @@ PrefabInstance:
     - target: {fileID: 121639629, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c1ebb7bc63152cb4594301731910c78d, type: 2}
+      objectReference: {fileID: 2100000, guid: cff0771cbca604048a0c54c4c52db6df, type: 2}
     - target: {fileID: 5558973809134498850, guid: 306a34b97e88bbf4bb133aad8d2d5f33, type: 3}
       propertyPath: zoneType
       value: 1
