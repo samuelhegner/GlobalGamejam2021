@@ -15,7 +15,6 @@ public class CollectionZone : Zone
         if (zoneType == gameObject.GetComponent<BeanPersonType>().Type)
         {
             gameObject.tag = "Collected";
-            EndGameManager.subtractFromNumberOfBeans();
             gameObject.GetComponent<BeanPersonMovement>().addPlaceToReach(exitPoint.position, false);
             ScoreManager.addToScore();
             BeanPersonHealth health;
